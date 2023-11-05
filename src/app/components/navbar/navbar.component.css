@@ -1,0 +1,45 @@
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.button-icon-box {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.button-icon-box .popover {
+  visibility: hidden;
+  display: flex;
+  width: 300px;
+
+  color: #fff;
+
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 180%;
+}
+
+.button-icon-box .popover::after {
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  margin-top: -5px;
+}
+
+.button-icon-box:hover .popover {
+  visibility: visible;
+  background-color: transparent;
+  border: none;
+}

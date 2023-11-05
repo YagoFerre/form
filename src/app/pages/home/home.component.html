@@ -1,0 +1,16 @@
+<div>
+  <div class="container-box">
+    <app-title-and-description (click)="handleShowNavbarTitle()"></app-title-and-description>
+    <app-navbar *ngIf="isTitleVisible" [formsQuestion]="formsQuestion" [formsTitle]="formsTitle"></app-navbar>
+  </div>
+
+  <div class="container-box" *ngFor="let forms of formsTitle">
+    <app-title-and-description (click)="handleShowNavbarTitle()" [formsTitle]="formsTitle"></app-title-and-description>
+    <app-navbar *ngIf="isTitleVisible" [formsQuestion]="formsQuestion" [formsTitle]="formsTitle"></app-navbar>
+  </div>
+
+  <div class="container-box" *ngFor="let forms of formsQuestion">
+    <app-question (click)="handleShowNavbarQuestion()" [formsQuestion]="formsQuestion"></app-question>
+    <app-navbar *ngIf="isQuestionVisible" [formsQuestion]="formsQuestion" [formsTitle]="formsTitle"></app-navbar>
+  </div>
+</div>

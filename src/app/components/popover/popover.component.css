@@ -1,0 +1,11 @@
+span {
+  padding: 4px;
+  color: #FFFFFF;
+  font-weight: regular;
+  font-size: 10px;
+
+  background-color: #5F6368;
+
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
